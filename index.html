@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt" itemscope itemtype="https://schema.org/Person">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Carlos Tomás Maute — Programador Fullstack &amp; DevOps</title>
+<meta name="description" content="Carlos Tomás Maute — Programador Fullstack & DevOps com 4+ anos a construir plataformas de missão crítica para os sectores público e financeiro: integração de sistemas governamentais, fintech, microsserviços, WebRTC, IA e segurança aplicacional." />
+<meta name="keywords" content="Programador Fullstack, DevOps, Python, Django, Java, Spring Boot, Node.js, NestJS, Golang, React, React Native, Flutter, Docker, CI/CD, AWS, PostgreSQL, MongoDB, Redis, WebRTC, Asterisk, Microsserviços, Integração de Sistemas, Fintech, Segurança, LDAP, Carlos Maute, Moçambique" />
+<meta name="author" content="Carlos Tomás Maute" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://maute007.github.io/carlos-maute/" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Carlos Tomás Maute — Fullstack & DevOps" />
+<meta property="og:description" content="Construo plataformas de missão crítica para o sector público e financeiro." />
+<meta property="og:locale" content="pt_PT" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   Portfólio — formato de folha profissional (estilo CV)
+   Paleta: branco / azul / cinza · tipografia Inter
+   Suave, sóbrio, sem efeitos exagerados.
+   ========================================================= */
+:root{
+  --ink:#1b2733; --ink-2:#37424f; --ink-3:#6b7686; --ink-4:#95a1b2;
+  --blue:#1f4e9c; --blue-2:#2563eb; --line:#e3e9f1; --line-2:#eef2f7;
+  --bg:#eef2f7; --paper:#ffffff; --soft:#f6f9fc;
+  --radius:12px;
+  --shadow:0 24px 60px -30px rgba(20,50,95,.30);
+  --shadow-sm:0 6px 20px -12px rgba(20,50,95,.28);
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  --sheet:940px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink-2);background:var(--bg);line-height:1.62;font-size:15.5px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--blue-2);text-decoration:none}
+::selection{background:#d7e6ff}
+
+/* ---- Barra de navegação (slim, discreta) ---- */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);}
+.nav-in{max-width:var(--sheet);margin:0 auto;display:flex;align-items:center;justify-content:space-between;
+  padding:13px clamp(18px,4vw,40px)}
+.nav-brand{font-weight:700;color:var(--ink);font-size:.98rem;letter-spacing:.2px}
+.nav-brand b{color:var(--blue)}
+.nav-links{display:flex;gap:4px}
+.nav-links a{color:var(--ink-3);font-size:.85rem;font-weight:500;padding:7px 12px;border-radius:7px;transition:color .2s,background .2s}
+.nav-links a:hover{color:var(--blue);background:var(--soft)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
+
+/* ---- Folha ---- */
+.sheet{max-width:var(--sheet);margin:30px auto;background:var(--paper);box-shadow:var(--shadow);
+  border-radius:14px;overflow:hidden}
+.pad{padding:clamp(30px,5vw,58px)}
+
+/* ---- Cabeçalho ---- */
+.masthead{border-bottom:2.5px solid var(--blue);padding-bottom:26px}
+.masthead h1{font-size:clamp(2rem,5vw,2.9rem);color:var(--ink);font-weight:700;letter-spacing:-.5px;line-height:1.05}
+.masthead .title{color:var(--blue);font-weight:600;font-size:clamp(1rem,2.4vw,1.18rem);margin-top:6px}
+.masthead .tagline{color:var(--ink-3);font-size:1.02rem;margin-top:14px;max-width:60ch}
+.contact-row{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.86rem;color:var(--ink-3)}
+.contact-row a,.contact-row span{color:var(--ink-3);display:inline-flex;align-items:center;gap:6px}
+.contact-row a:hover{color:var(--blue)}
+.contact-row b{color:var(--ink-2);font-weight:600}
+.actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;padding:11px 20px;border-radius:9px;
+  transition:transform .2s ease,background .2s,border-color .2s,color .2s;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:#183e7d}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ---- Secções ---- */
+section.block{padding-top:34px}
+h2{font-size:.82rem;text-transform:uppercase;letter-spacing:1.6px;color:var(--blue);font-weight:700;
+  padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+h2 .idx{font-size:.72rem;color:var(--ink-4);font-weight:600}
+p.lead{font-size:1.02rem;color:var(--ink-2)}
+
+/* ---- Métricas (sóbrias) ---- */
+.metrics{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0}
+.metric .n{font-size:1.7rem;font-weight:700;color:var(--blue);line-height:1}
+.metric .l{font-size:.8rem;color:var(--ink-3);margin-top:6px}
+
+/* ---- Competências (lista definição, como no CV) ---- */
+.skills{display:grid;grid-template-columns:190px 1fr;gap:14px 20px}
+.skills dt{font-weight:600;color:var(--ink);font-size:.94rem}
+.skills dd{color:var(--ink-2);font-size:.94rem}
+.skills dd .k{display:inline-block;color:var(--ink-2);background:var(--soft);border:1px solid var(--line);
+  border-radius:6px;padding:2px 9px;margin:0 5px 6px 0;font-size:.82rem}
+
+/* ---- Projetos (entradas limpas) ---- */
+.proj{padding:22px 0;border-bottom:1px solid var(--line-2)}
+.proj:last-child{border-bottom:none}
+.proj-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.proj h3{font-size:1.08rem;color:var(--ink);font-weight:600}
+.proj .ctx{color:var(--blue);font-size:.82rem;font-weight:600;white-space:nowrap}
+.proj p{margin-top:7px;font-size:.94rem;color:var(--ink-2);max-width:74ch}
+.proj .kpi{margin-top:9px;font-size:.84rem;color:var(--ink);font-weight:600}
+.proj .kpi::before{content:"▸ ";color:var(--blue)}
+.proj .ptags{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
+.proj .ptags span{font-size:.76rem;color:var(--ink-3);border:1px solid var(--line);border-radius:6px;padding:3px 9px}
+
+/* ---- Experiência ---- */
+.job{padding:16px 0;border-bottom:1px solid var(--line-2)}
+.job:last-child{border-bottom:none}
+.job-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.job h3{font-size:1rem;color:var(--ink);font-weight:600}
+.job .date{font-size:.8rem;color:var(--ink-4);font-weight:600;white-space:nowrap}
+.job .org{color:var(--blue);font-size:.86rem;font-weight:600;margin:2px 0 6px}
+.job p{font-size:.92rem;color:var(--ink-2);max-width:76ch}
+
+/* ---- Formação / Idiomas ---- */
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px}
+.edu .item .d{font-size:.78rem;color:var(--ink-4);font-weight:600}
+.edu .item h3{font-size:.98rem;color:var(--ink);font-weight:600;margin-top:3px}
+.edu .item p{font-size:.86rem;color:var(--ink-3)}
+.langs{margin-top:22px;font-size:.92rem;color:var(--ink-2)}
+.langs b{color:var(--ink)}
+
+/* ---- Contacto ---- */
+.contact-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:border-color .2s,box-shadow .2s;background:#fff}
+.card:hover{border-color:var(--blue);box-shadow:var(--shadow-sm)}
+.card .l{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:var(--ink-4);font-weight:600}
+.card .v{margin-top:6px;font-weight:600;color:var(--ink);font-size:.92rem;word-break:break-word}
+.card .v small{display:block;font-weight:400;color:var(--ink-3);font-size:.78rem;margin-top:2px}
+
+/* ---- Rodapé ---- */
+footer{max-width:var(--sheet);margin:0 auto;padding:26px clamp(18px,4vw,40px) 46px;text-align:center;color:var(--ink-4);font-size:.82rem}
+footer b{color:var(--ink-3)}
+footer a{color:var(--blue-2)}
+
+/* ---- Animação subtil ---- */
+.reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:820px){
+  .nav-links{display:none}.burger{display:flex}
+  nav.open .nav-links{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:10px 18px;gap:2px}
+  .metrics{grid-template-columns:repeat(2,1fr);gap:22px 18px}
+  .skills{grid-template-columns:1fr;gap:4px 0}
+  .skills dt{margin-top:12px}
+  .edu{grid-template-columns:1fr}
+  .contact-cards{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+@media print{nav,.actions,.burger{display:none}body{background:#fff}.sheet{box-shadow:none;margin:0;border-radius:0;max-width:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#topo" class="nav-brand">Carlos <b>Maute</b></a>
+    <div class="nav-links" id="navlinks">
+      <a href="#sobre">Perfil</a>
+      <a href="#competencias">Competências</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#formacao">Formação</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<main class="sheet" id="topo">
+  <div class="pad">
+
+    <!-- Cabeçalho -->
+    <header class="masthead">
+      <h1>Carlos Tomás Maute</h1>
+      <div class="title">Programador Fullstack &amp; DevOps</div>
+      <p class="tagline">Construo e opero plataformas de missão crítica para os sectores público e financeiro — integração de sistemas, microsserviços e segurança aplicacional, de ponta a ponta.</p>
+      <div class="contact-row">
+        <span>📍 <b>Maputo, Moçambique</b></span>
+        <a href="tel:+258865105545">📞 <b>+258 86 510 5545</b></a>
+        <a href="mailto:carlxyzsmaute@gmail.com">✉️ carlxyzsmaute@gmail.com</a>
+        <a href="https://github.com/Maute007" target="_blank" rel="noopener">🔗 github.com/Maute007</a>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="Carlos_Maute_CV_PT.pdf" target="_blank" rel="noopener">Descarregar CV (PT)</a>
+        <a class="btn btn-ghost" href="Carlos_Maute_CV_EN.pdf" target="_blank" rel="noopener">CV (EN)</a>
+        <a class="btn btn-ghost" href="https://wa.me/258865105545" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </header>
+
+    <!-- Perfil -->
+    <section class="block reveal" id="sobre">
+      <h2>Perfil Profissional <span class="idx">01</span></h2>
+      <p class="lead">Programador de software fullstack e DevOps com mais de quatro anos de experiência (desde 2022) na construção e operação de plataformas de missão crítica para os sectores público e financeiro. Especialista em integração de sistemas, arquitectura de microsserviços e segurança aplicacional — do microsserviço central que interliga os sistemas de vários organismos do Estado a motores de transacções e verificação de identidade em pagamentos digitais. Assumo responsabilidade técnica de ponta a ponta, com liderança de módulos e de equipas, e aplico uma mentalidade de segurança para entregar sistemas resilientes por concepção. Experiência em ambientes governamentais, fintech e comércio electrónico, em projectos nacionais e internacionais (Quénia e Austrália).</p>
+      <div class="metrics">
+        <div class="metric"><div class="n">20&nbsp;000+</div><div class="l">Utilizadores em 6 meses</div></div>
+        <div class="metric"><div class="n">80%</div><div class="l">Das receitas de uma universidade</div></div>
+        <div class="metric"><div class="n">4+ anos</div><div class="l">Em sistemas de missão crítica</div></div>
+        <div class="metric"><div class="n">−40%</div><div class="l">Erros de processamento fiscal</div></div>
+      </div>
+    </section>
+
+    <!-- Competências -->
+    <section class="block reveal" id="competencias">
+      <h2>Competências Técnicas <span class="idx">02</span></h2>
+      <dl class="skills">
+        <dt>Back-end &amp; APIs</dt>
+        <dd><span class="k">Python / Django</span><span class="k">Java / Spring Boot</span><span class="k">Node.js / Express</span><span class="k">NestJS</span><span class="k">Golang</span><span class="k">REST &amp; GraphQL</span><span class="k">Microsserviços</span></dd>
+
+        <dt>Front-end &amp; Mobile</dt>
+        <dd><span class="k">React / Next.js</span><span class="k">Vue.js / Quasar</span><span class="k">TypeScript</span><span class="k">React Native</span><span class="k">Flutter</span></dd>
+
+        <dt>DevOps &amp; Cloud</dt>
+        <dd><span class="k">Docker</span><span class="k">CI/CD</span><span class="k">Linux</span><span class="k">AWS (EC2 · S3 · Route 53)</span><span class="k">Monitorização</span></dd>
+
+        <dt>Bases de Dados</dt>
+        <dd><span class="k">PostgreSQL</span><span class="k">MySQL</span><span class="k">MongoDB</span><span class="k">Redis</span><span class="k">Supabase</span><span class="k">Firebase</span></dd>
+
+        <dt>Segurança &amp; Testes</dt>
+        <dd><span class="k">LDAP · MFA · SSO</span><span class="k">Wireshark</span><span class="k">Burp Suite · OWASP</span><span class="k">aircrack-ng</span><span class="k">Testes de segurança</span></dd>
+
+        <dt>Tempo Real, Comms &amp; IA</dt>
+        <dd><span class="k">WebRTC</span><span class="k">Asterisk PBX · VoIP</span><span class="k">IA nativa (transcrição)</span><span class="k">Automação</span></dd>
+      </dl>
+    </section>
+
+    <!-- Projetos -->
+    <section class="block reveal" id="projetos">
+      <h2>Projetos em Destaque <span class="idx">03</span></h2>
+
+      <div class="proj">
+        <div class="proj-top"><h3>Suite Corporativa — Microsserviço Central</h3><span class="ctx">Partner Link · Governo</span></div>
+        <p>Redesenho e evolução do microsserviço que interliga todos os sistemas do ecossistema estatal — finanças, tarefas e reuniões, processos, monitoria &amp; avaliação e RH. Defini o padrão de integração institucional, eliminando integrações ponto a ponto.</p>
+        <div class="kpi">Integração de múltiplos organismos do Estado</div>
+        <div class="ptags"><span>Spring Boot</span><span>Node.js</span><span>Microsserviços</span><span>Docker</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><h3>Sistema de Tarefas &amp; Reuniões</h3><span class="ctx">Partner Link · Tempo real</span></div>
+        <p>Plataforma de colaboração com comunicação em tempo real por <b>WebRTC</b> (áudio/vídeo) e mecanismos de <b>IA com modelos nativos</b> para <b>transcrição automática de atas</b> de reunião — reduzindo trabalho manual e perda de informação.</p>
+        <div class="kpi">WebRTC + IA de transcrição de atas</div>
+        <div class="ptags"><span>WebRTC</span><span>IA / Speech-to-Text</span><span>Node.js</span><span>React</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><h3>Central Telefónica Governamental</h3><span class="ctx">Partner Link · Telecom</span></div>
+        <p>Arquitectura e implementação de uma central telefónica com <b>Asterisk PBX</b> e painel administrativo em Node.js, substituindo processos manuais de atendimento e encaminhamento.</p>
+        <div class="kpi">Atendimento e encaminhamento automatizados</div>
+        <div class="ptags"><span>Asterisk PBX</span><span>VoIP</span><span>Node.js</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><h3>Paytesy — Pagamentos Digitais</h3><span class="ctx">Tribox · Fintech</span></div>
+        <p>Camada de servidor e garantia de qualidade de um ecossistema de pagamentos. Desenvolvi um <b>módulo próprio de reconhecimento facial e verificação de identidade</b>, eliminando fornecedores externos (ex.: Sumsub), e optimizei o motor de transacções financeiras.</p>
+        <div class="kpi">Fim da dependência de fornecedores externos de verificação</div>
+        <div class="ptags"><span>Verificação de Identidade</span><span>Motor de Transacções</span><span>Segurança</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><h3>ShopKing — Marketplace Multivendedor</h3><span class="ctx">Corner Dev · E-commerce</span></div>
+        <p>Plataforma de comércio electrónico multivendedor com cache Redis e sistema automatizado de comissões.</p>
+        <div class="kpi">−35% no tempo de carregamento · +12% na receita</div>
+        <div class="ptags"><span>Redis</span><span>Node.js</span><span>React</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><h3>Naturali — Mercado Digital</h3><span class="ctx">Corner Dev · Quénia</span></div>
+        <p>Plataforma para mais de 12 000 vendedores de produtos naturais, com geolocalização aplicada a entregas sustentáveis.</p>
+        <div class="kpi">12 000+ vendedores</div>
+        <div class="ptags"><span>Geolocalização</span><span>Marketplace</span><span>APIs</span></div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><h3>Gestão Integrada de Receitas</h3><span class="ctx">UEM · Banca</span></div>
+        <p>Sistema de gestão de receitas próprias com <b>integração bancária</b> (BIM e BCI) via APIs RESTful, passando a processar <b>80% das receitas</b> da universidade.</p>
+        <div class="kpi">80% das receitas processadas · −40% erros fiscais</div>
+        <div class="ptags"><span>Integração Bancária</span><span>REST</span><span>Django</span></div>
+      </div>
+
+    </section>
+
+    <!-- Experiência -->
+    <section class="block reveal" id="experiencia">
+      <h2>Experiência Profissional <span class="idx">04</span></h2>
+
+      <div class="job">
+        <div class="job-top"><h3>Programador de Software — DevOps &amp; Integração de Sistemas</h3><span class="date">Ago. 2025 – Presente</span></div>
+        <div class="org">Partner Link, Lda. · Maputo</div>
+        <p>Arquitectura e operação de plataformas governamentais de missão crítica. Liderança técnica da Suite Corporativa, do sistema de tarefas &amp; reuniões (WebRTC + IA) e da central telefónica (Asterisk PBX). Concepção da camada DevOps transversal.</p>
+      </div>
+
+      <div class="job">
+        <div class="job-top"><h3>Programador Back-end &amp; Responsável pela Qualidade</h3><span class="date">2025</span></div>
+        <div class="org">Tribox · Maputo</div>
+        <p>Servidor e qualidade do Paytesy: módulo próprio de reconhecimento facial/verificação de identidade, optimização do motor de transacções e testes funcionais, de regressão e de segurança.</p>
+      </div>
+
+      <div class="job">
+        <div class="job-top"><h3>Programador Multiplataforma — Liderança Técnica</h3><span class="date">Dez. 2022 – Presente</span></div>
+        <div class="org">Corner Dev · Maputo</div>
+        <p>Sistemas escaláveis de ponta a ponta (20 000+ utilizadores em seis meses): ShopKing, Naturali (Quénia) e 6Valley.</p>
+      </div>
+
+      <div class="job">
+        <div class="job-top"><h3>Consultor de Desenvolvimento de Software</h3><span class="date">2024 – Presente</span></div>
+        <div class="org">AtomTechnology · Moçambique</div>
+        <p>Sistema de gestão de concursos com automação em Django, reduzindo em 40% o tempo de processamento de candidaturas.</p>
+      </div>
+
+      <div class="job">
+        <div class="job-top"><h3>Administrador de Infraestrutura e Servidores</h3><span class="date">2023 – 2024</span></div>
+        <div class="org">Horizon Consulting / CPTEC · Maputo</div>
+        <p>Gestão de servidores Linux em produção: monitorização, cópias de segurança, reforço de segurança e optimização de sistemas críticos, com disponibilidade contínua.</p>
+      </div>
+
+      <div class="job">
+        <div class="job-top"><h3>Programador · Formador Técnico</h3><span class="date">2023</span></div>
+        <div class="org">UEM — Espaço de Inovação · "Code Like a Girl" (Vodacom)</div>
+        <p>Integração bancária que passou a processar 80% das receitas da UEM. Formação de mais de 50 mulheres em desenvolvimento web.</p>
+      </div>
+
+    </section>
+
+    <!-- Formação -->
+    <section class="block reveal" id="formacao">
+      <h2>Formação &amp; Idiomas <span class="idx">05</span></h2>
+      <div class="edu">
+        <div class="item">
+          <div class="d">2025 – Presente</div>
+          <h3>Engenharia Informática (em curso)</h3>
+          <p>Universidade Técnica de Moçambique (UDM) · Maputo</p>
+        </div>
+        <div class="item">
+          <div class="d">2020 – 2023</div>
+          <h3>Técnico de Informática e Programação Web</h3>
+          <p>Instituto Médio e Politécnico (IMEP) · Maputo</p>
+        </div>
+      </div>
+      <p class="langs"><b>Idiomas:</b> Português (nativo) · Inglês (bom) · Changana (fluente)</p>
+    </section>
+
+    <!-- Contacto -->
+    <section class="block reveal" id="contacto">
+      <h2>Contacto <span class="idx">06</span></h2>
+      <div class="contact-cards">
+        <a class="card" href="mailto:carlxyzsmaute@gmail.com">
+          <div class="l">Email principal</div>
+          <div class="v">carlxyzsmaute@gmail.com</div>
+        </a>
+        <a class="card" href="mailto:maute9328@gmail.com">
+          <div class="l">Email alternativo</div>
+          <div class="v">maute9328@gmail.com</div>
+        </a>
+        <a class="card" href="tel:+258865105545">
+          <div class="l">Telefone · WhatsApp · Chamadas</div>
+          <div class="v">+258 86 510 5545<small>Disponível para chamadas e WhatsApp</small></div>
+        </a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div><b>Carlos Tomás Maute</b> · Programador Fullstack &amp; DevOps · Maputo, Moçambique</div>
+  <div style="margin-top:6px">+258 86 510 5545 · carlxyzsmaute@gmail.com · <a href="https://github.com/Maute007" target="_blank" rel="noopener">github.com/Maute007</a></div>
+  <div style="margin-top:10px;opacity:.7">© <span id="yr"></span> Carlos Maute</div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* Menu mobile */
+const nav=document.getElementById('nav'), burger=document.getElementById('burger');
+burger.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+/* Revelação subtil ao rolar */
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
