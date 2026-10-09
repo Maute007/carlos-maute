@@ -1,0 +1,14 @@
+# Local / private — never publish to the public site
+ruvector.db
+.swarm/
+.claude-flow/
+.DS_Store
+
+# Other people's documents / private contracts kept in this folder
+Abel_Eduardo_Mondlane_CV_FNB.docx (1).pdf
+CONTRATO*.pdf
+
+# Editable sources & cover letters (not part of the public site; keep local)
+*.docx
+Carlos_Maute_Carta_PT.pdf
+Carlos_Maute_Cover_Letter_EN.pdf
