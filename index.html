@@ -403,9 +403,17 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
       <article class="pcard">
         <div class="shot editorial"><div class="mini" data-i18n="p7.cat">Sector Público · UEM</div><div class="big">G<b>IRP</b></div></div>
         <div class="body"><span class="cat" data-i18n="p7.cat">Sector Público · UEM</span><h3 data-i18n="p7.t">GIRP — Gestão Integrada de Receitas Próprias</h3>
-          <p data-i18n="p7.p">Desenvolvimento fullstack do sistema de receitas próprias da UEM, com autenticação multicamada — JWT nativo + OpenLDAP (2ª camada e gestão de utilizadores). Também desenvolvi features do SIGA (gestão académica), incluindo a consulta de multas pelos estudantes (apenas visualização).</p>
+          <p data-i18n="p7.p">Desenvolvimento fullstack do sistema de receitas próprias da UEM, com autenticação multicamada (JWT nativo + OpenLDAP, para 2ª camada e gestão de utilizadores) e integração com os bancos BIM e BCI.</p>
           <span class="kpi" data-i18n="p7.k">80% das receitas · auth multicamada (JWT + OpenLDAP)</span>
           <div class="stk"><span>Django</span><span>Vue.js</span><span>Quasar</span><span>JWT</span><span>OpenLDAP</span></div></div>
+      </article>
+
+      <article class="pcard">
+        <div class="shot editorial"><div class="mini" data-i18n="p8.cat">Sector Público · UEM</div><div class="big">S<b>IGA</b></div></div>
+        <div class="body"><span class="cat" data-i18n="p8.cat">Sector Público · UEM</span><h3 data-i18n="p8.t">SIGA — Sistema de Gestão Académica</h3>
+          <p data-i18n="p8.p">Desenvolvi a feature de multas no SIGA da UEM: os estudantes passaram a acompanhar as suas multas diretamente no sistema (apenas visualização, sem pagamento).</p>
+          <span class="kpi" data-i18n="p8.k">Consulta de multas pelos estudantes</span>
+          <div class="stk"><span>Django</span><span>Vue.js</span><span>Quasar</span></div></div>
       </article>
 
       <article class="pcard">
@@ -620,7 +628,8 @@ const EN={
  'proc.3t':'Deploy','proc.3p':'Docker, Kubernetes and CI/CD — from container to production.',
  'proc.4t':'Monitoring','proc.4p':'I observe, protect and keep systems up.',
  'proj.eyebrow':'Featured projects','proj.h':'Systems in production that make a difference.','proj.desc':'Some of my biggest projects across the public sector, fintech and e-commerce — I also provide services to several companies.','proj.more':'See more on GitHub',
- 'p7.cat':'Public sector · UEM','p7.t':'GIRP — Integrated Own-Revenue System','p7.p':'Full-stack development of the UEM own-revenue system, with multi-layer authentication — native JWT + OpenLDAP (second layer and user management). I also built SIGA (academic management) features, including students viewing their fines (view-only).','p7.k':'80% of revenue · multi-layer auth (JWT + OpenLDAP)',
+ 'p7.cat':'Public sector · UEM','p7.t':'GIRP — Integrated Own-Revenue System','p7.p':'Full-stack development of the UEM own-revenue system, with multi-layer authentication (native JWT + OpenLDAP for a second layer and user management) and integration with BIM and BCI banks.','p7.k':'80% of revenue · multi-layer auth (JWT + OpenLDAP)',
+ 'p8.cat':'Public sector · UEM','p8.t':'SIGA — Academic Management System','p8.p':"I built the fines feature in UEM's SIGA: students can now track their fines directly in the system (view-only, no payment).",'p8.k':"Students' fines lookup",
  'clients.lab':'Service provider — selected clients','dock.call':'Call',
  'p1.cat':'Government','p1.t':'Corporate Suite — Central Microservice','p1.p':'An 8-module platform in production at the Ministry of Transport and Logistics and its institutions. I set the integration standard so systems plug into the suite.','p1.k':'8 modules · multiple state agencies',
  'p2.cat':'Fintech','p2.t':'Identity Verification (KYC)','p2.p':'In-house KYC module at Paytesy using OCR (Pytesseract) and computer vision (OpenCV), integrated via a Django GraphQL API. It replaced the external vendor Sumsub.','p2.k':'Replaced an external vendor (Sumsub)',
