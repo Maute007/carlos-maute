@@ -240,6 +240,23 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
 .lines.in .ln:nth-child(3)>i{transition-delay:.18s}
 .lines.in .ln:nth-child(4)>i{transition-delay:.27s}
 
+/* ---- Clients / service provider ---- */
+.clients{margin-top:40px;border:1px solid var(--border);border-radius:var(--r);padding:24px clamp(18px,3vw,32px)}
+.clients .lab{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.clients .names{margin-top:15px;display:flex;flex-wrap:wrap;gap:12px 30px;align-items:center}
+.clients .names span{font-weight:700;color:var(--ink);font-size:1.02rem;letter-spacing:-.01em;display:inline-flex;align-items:center;gap:30px}
+.clients .names span::after{content:"";width:5px;height:5px;background:var(--accent);border-radius:50%}
+.clients .names span:last-child::after{display:none}
+
+/* ---- Mobile action dock ---- */
+.dock{display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);
+  border-top:1px solid var(--border);padding:8px max(10px,env(safe-area-inset-left)) calc(8px + env(safe-area-inset-bottom));
+  grid-template-columns:repeat(4,1fr);gap:6px}
+.dock a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:7px 2px;border-radius:12px;color:var(--ink-2);font-size:.66rem;font-weight:600}
+.dock a .ic{width:22px;height:22px}
+.dock a.p{color:var(--accent)}
+.dock a:active{background:var(--bg-2)}
+
 /* ---- Responsive ---- */
 @media(max-width:1023px){
   .hero-grid{grid-template-columns:1fr;gap:38px}
@@ -257,7 +274,15 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
   nav.open .nav-links a{padding:12px 4px}
   .nav-cta{display:none}
   .pgrid,.sk-grid,.proc,.edu{grid-template-columns:1fr}
-  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stats{grid-template-columns:1fr 1fr;gap:20px}
+  .hero{padding-top:30px}
+  .hero h1{font-size:clamp(2.15rem,9vw,2.8rem);letter-spacing:-.03em;margin-top:18px}
+  .hero .desc{margin-top:18px}
+  .hero .acts{gap:10px}
+  .hero .acts .btn-dark,.hero .acts .btn-outline{flex:1 1 140px;justify-content:center}
+  .proc .st{padding:22px}
+  .dock{display:grid}
+  body{padding-bottom:76px}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -347,7 +372,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
     <div class="sh rv">
       <span class="eyebrow" data-i18n="proj.eyebrow">Projetos em destaque</span>
       <h2 data-i18n="proj.h">Sistemas em produção que fazem a diferença.</h2>
-      <p data-i18n="proj.desc">Uma seleção de plataformas reais no sector público, fintech e comércio electrónico.</p>
+      <p data-i18n="proj.desc">Alguns dos meus maiores projetos no sector público, fintech e comércio electrónico — presto também serviços a várias empresas.</p>
     </div>
     <div class="pgrid stagger rv">
 
@@ -376,6 +401,14 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
       </article>
 
       <article class="pcard">
+        <div class="shot editorial"><div class="mini" data-i18n="p7.cat">Sector Público · UEM</div><div class="big">G<b>IRP</b></div></div>
+        <div class="body"><span class="cat" data-i18n="p7.cat">Sector Público · UEM</span><h3 data-i18n="p7.t">GIRP — Gestão Integrada de Receitas Próprias</h3>
+          <p data-i18n="p7.p">Desenvolvimento fullstack do sistema de receitas próprias da UEM, com autenticação multicamada — JWT nativo + OpenLDAP (2ª camada e gestão de utilizadores). Também desenvolvi features do SIGA (gestão académica), incluindo a consulta de multas pelos estudantes (apenas visualização).</p>
+          <span class="kpi" data-i18n="p7.k">80% das receitas · auth multicamada (JWT + OpenLDAP)</span>
+          <div class="stk"><span>Django</span><span>Vue.js</span><span>Quasar</span><span>JWT</span><span>OpenLDAP</span></div></div>
+      </article>
+
+      <article class="pcard">
         <a class="shot" href="https://shopking.dev/" target="_blank" rel="noopener noreferrer"><img src="assets/proj-shopking.jpg" alt="ShopKing" loading="lazy"></a>
         <div class="body"><span class="cat" data-i18n="p4.cat">E-commerce · Austrália</span><h3>ShopKing — Marketplace</h3>
           <p data-i18n="p4.p">Plataforma multivendedor (MERN / Next.js) com cache Redis e sistema automático de comissões, para um cliente na Austrália.</p>
@@ -400,6 +433,12 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
       </article>
 
     </div>
+    <div class="clients rv">
+      <div class="lab" data-i18n="clients.lab">Prestação de serviços — alguns dos clientes</div>
+      <div class="names">
+        <span>Academica, Lda</span><span>Kuchukuro Microcrédito</span><span>AtomTechnology</span><span>Horizon Consulting</span><span>Nerion Grupo</span>
+      </div>
+    </div>
     <div class="proj-more rv">
       <a class="btn btn-text" href="https://github.com/Maute007" target="_blank" rel="noopener"><span data-i18n="proj.more">Ver mais no GitHub</span> <span class="arr">→</span></a>
     </div>
@@ -421,7 +460,7 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
       <div class="it"><div class="hd"><h3 data-i18n="e4.r">Consultor de Infraestrutura & Servidores</h3><span class="when">2023 — <span data-i18n="now">Presente</span></span></div><div class="org">Horizon Consulting / CPTEC · Maputo</div><p data-i18n="e4.p">Gestão de servidores Linux em produção: monitorização, backups, hardening e optimização de sistemas críticos, com disponibilidade contínua.</p></div>
       <div class="it"><div class="hd"><h3 data-i18n="e5.r">Consultor de Desenvolvimento de Software</h3><span class="when">2024</span></div><div class="org">AtomTechnology · Moçambique</div><p data-i18n="e5.p">Sistema de gestão de concursos com automação em Django sobre SQL Server e MySQL, reduzindo em 40% o tempo de processamento de candidaturas.</p></div>
       <div class="it"><div class="hd"><h3 data-i18n="e6.r">Technical Lead — Fullstack Developer</h3><span class="when">Dez 2022 — 2024</span></div><div class="org">Corner Dev · Maputo · Austrália & Quénia</div><p data-i18n="e6.p">Liderei uma equipa de 6 em plataformas que cresceram para 20 000+ utilizadores em seis meses: ShopKing & 6Valley (Austrália), Naturali (Quénia) e o Linkrider (React Native + NestJS).</p></div>
-      <div class="it"><div class="hd"><h3 data-i18n="e7.r">Fullstack Developer</h3><span class="when">2023</span></div><div class="org">Universidade Eduardo Mondlane — Espaço de Inovação</div><p data-i18n="e7.p">Sistema de receitas próprias com integração dos bancos BIM e BCI, que passou a processar 80% das receitas da universidade, com -40% de erros fiscais.</p></div>
+      <div class="it"><div class="hd"><h3 data-i18n="e7.r">Fullstack Developer</h3><span class="when">2023</span></div><div class="org">Universidade Eduardo Mondlane — Espaço de Inovação</div><p data-i18n="e7.p">GIRP (gestão integrada de receitas próprias) com autenticação multicamada (JWT + OpenLDAP), Django e Vue+Quasar; integração dos bancos BIM e BCI (80% das receitas, -40% de erros fiscais) e features do SIGA (consulta de multas pelos estudantes).</p></div>
       <div class="it"><div class="hd"><h3 data-i18n="e8.r">Formador de Desenvolvimento Web</h3><span class="when">2023</span></div><div class="org">"Code Like a Girl" — Vodacom</div><p data-i18n="e8.p">Formei mais de 50 mulheres em desenvolvimento web e design de interfaces, com foco na entrada no mercado tecnológico.</p></div>
     </div>
   </div>
@@ -510,6 +549,14 @@ footer{border-top:1px solid var(--border);padding:34px 0;background:#fff}
   </div>
 </footer>
 
+<!-- ===== MOBILE DOCK ===== -->
+<div class="dock">
+  <a class="p" href="https://wa.me/258865105545" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .16 11.9C.16 5.33 5.5 0 12.06 0a11.82 11.82 0 0 1 8.41 3.49 11.82 11.82 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.69-1.45L.06 24ZM6.6 20.2c1.68.99 3.28 1.59 5.46 1.59 5.45 0 9.89-4.43 9.89-9.88 0-5.46-4.43-9.89-9.88-9.89-5.46 0-9.89 4.43-9.89 9.88 0 2.3.64 3.8 1.76 5.5l-.99 3.63 3.65-.95ZM18.02 14.7c-.07-.12-.26-.2-.55-.34-.29-.14-1.73-.86-2-.95-.27-.1-.46-.15-.65.15-.2.29-.75.94-.92 1.14-.17.2-.34.22-.63.07-.29-.14-1.23-.46-2.35-1.45-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.14-.17.19-.29.29-.49.1-.2.05-.37-.02-.51-.07-.14-.65-1.57-.9-2.15-.24-.57-.48-.49-.65-.5l-.56-.01c-.2 0-.51.07-.78.37-.27.29-1.02.99-1.02 2.42 0 1.43 1.04 2.81 1.19 3 .14.2 2.04 3.12 4.95 4.38.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.73-.71 1.97-1.39.24-.69.24-1.27.17-1.39Z"/></svg><span>WhatsApp</span></a>
+  <a href="tel:+258865105545"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg><span data-i18n="dock.call">Chamar</span></a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=carlxyzsmaute@gmail.com" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg><span>Email</span></a>
+  <a href="Carlos_Maute_CV_PT.pdf" target="_blank" rel="noopener" id="cvBtn4"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>CV</span></a>
+</div>
+
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
 
@@ -572,7 +619,9 @@ const EN={
  'proc.2t':'Code','proc.2p':'Backend, APIs and real-time — with quality and tests.',
  'proc.3t':'Deploy','proc.3p':'Docker, Kubernetes and CI/CD — from container to production.',
  'proc.4t':'Monitoring','proc.4p':'I observe, protect and keep systems up.',
- 'proj.eyebrow':'Featured projects','proj.h':'Systems in production that make a difference.','proj.desc':'A selection of real platforms across the public sector, fintech and e-commerce.','proj.more':'See more on GitHub',
+ 'proj.eyebrow':'Featured projects','proj.h':'Systems in production that make a difference.','proj.desc':'Some of my biggest projects across the public sector, fintech and e-commerce — I also provide services to several companies.','proj.more':'See more on GitHub',
+ 'p7.cat':'Public sector · UEM','p7.t':'GIRP — Integrated Own-Revenue System','p7.p':'Full-stack development of the UEM own-revenue system, with multi-layer authentication — native JWT + OpenLDAP (second layer and user management). I also built SIGA (academic management) features, including students viewing their fines (view-only).','p7.k':'80% of revenue · multi-layer auth (JWT + OpenLDAP)',
+ 'clients.lab':'Service provider — selected clients','dock.call':'Call',
  'p1.cat':'Government','p1.t':'Corporate Suite — Central Microservice','p1.p':'An 8-module platform in production at the Ministry of Transport and Logistics and its institutions. I set the integration standard so systems plug into the suite.','p1.k':'8 modules · multiple state agencies',
  'p2.cat':'Fintech','p2.t':'Identity Verification (KYC)','p2.p':'In-house KYC module at Paytesy using OCR (Pytesseract) and computer vision (OpenCV), integrated via a Django GraphQL API. It replaced the external vendor Sumsub.','p2.k':'Replaced an external vendor (Sumsub)',
  'p3.cat':'Real-time · AI','p3.t':'Tasks & Meetings','p3.p':'Real-time collaboration with WebRTC audio/video and AI-powered automatic transcription of meeting minutes (native models).','p3.k':'WebRTC + AI meeting transcription',
@@ -587,7 +636,7 @@ const EN={
  'e4.r':'Infrastructure & Server Consultant','e4.p':'Manage production Linux servers: monitoring, backups, hardening and optimization of critical systems, with continuous availability.',
  'e5.r':'Software Development Consultant','e5.p':'Tender-management system with Django automation on SQL Server and MySQL, cutting application processing time by 40%.',
  'e6.r':'Technical Lead — Fullstack Developer','e6.p':'Led a team of 6 on platforms that grew to 20,000+ users in six months: ShopKing & 6Valley (Australia), Naturali (Kenya), plus Linkrider (React Native + NestJS).',
- 'e7.r':'Fullstack Developer','e7.p':'Own-revenue system with BIM & BCI bank integrations, now processing 80% of the university\'s revenue, with a 40% drop in tax-processing errors.',
+ 'e7.r':'Fullstack Developer','e7.p':'GIRP (integrated own-revenue management) with multi-layer auth (JWT + OpenLDAP), Django and Vue+Quasar; BIM & BCI bank integrations (80% of revenue, -40% fiscal errors) and SIGA features (students\' fines lookup).',
  'e8.r':'Web Development Instructor','e8.p':'Trained 50+ women in web development and interface design, focused on entering the tech job market.',
  'sk.eyebrow':'Technical skills','sk.h':'The stack I work with.','sk.desc':'Grounded in real production systems, not just checklists.',
  'sk.lang':'Languages','sk.back':'Back-end & APIs','sk.front':'Front-end & Mobile','sk.devops':'DevOps & Cloud','sk.db':'Databases','sk.sec':'Security & Quality',
@@ -606,7 +655,7 @@ function applyLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.getAttribute('data-i18n');if(d[k]!=null)el.innerHTML=d[k];});
   document.documentElement.lang=lang==='en'?'en':'pt-MZ';document.title=META[lang].title;
   const md=document.getElementById('meta-desc');if(md)md.setAttribute('content',META[lang].desc);
-  const cv=lang==='en'?'Carlos_Maute_CV_EN.pdf':'Carlos_Maute_CV_PT.pdf';['cvBtn','cvBtn2','cvBtn3'].forEach(id=>{const b=document.getElementById(id);if(b)b.setAttribute('href',cv);});
+  const cv=lang==='en'?'Carlos_Maute_CV_EN.pdf':'Carlos_Maute_CV_PT.pdf';['cvBtn','cvBtn2','cvBtn3','cvBtn4'].forEach(id=>{const b=document.getElementById(id);if(b)b.setAttribute('href',cv);});
   document.querySelector('.l-pt').classList.toggle('on',lang==='pt');document.querySelector('.l-en').classList.toggle('on',lang==='en');
   curLang=lang;try{localStorage.setItem('cm-lang',lang);}catch(e){}
 }
